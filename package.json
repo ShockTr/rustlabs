@@ -1,0 +1,25 @@
+{
+  "name": "rustlabs",
+  "version": "0.1.0",
+  "description": "rustlabs item list scraper",
+  "main": "src/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShockTr/rustlabs.git"
+  },
+  "author": "Bora Kayık",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShockTr/rustlabs/issues"
+  },
+  "homepage": "https://github.com/ShockTr/rustlabs#readme",
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "puppeteer": "^10.1.0"
+  }
+}
