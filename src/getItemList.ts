@@ -8,14 +8,14 @@ export async function getItemList() {
     let items: GenericItem[] = []
     $(".info-block").children("a").each((i,el) => {
         const name = $(el).text()
-        const link = `https://rustlabs.com${$(el).attr("href")}`
+        const url = `https://rustlabs.com${$(el).attr("href")}`
         const logo = `https:${$(el).find("img").attr("src").replace("items40", "items180")}`
-        items.push({ name, link, logo })
+        items.push({ name, url, logo })
     })
     return items
 }
 export interface GenericItem {
     name: string
-    link: string
+    url: string
     logo: string
 }
