@@ -1,0 +1,21 @@
+import fetch from "node-fetch";
+import cheerio from "cheerio";
+
+export async function getItemList() {
+    let res = await fetch("https://rustlabs.com/group=itemlist")
+    let html = await res.text()
+    const $ = cheerio.load(html)
+    let items: GenericItem[] = []
+    $(".info-block").children("a").each((i,el) => {
+        const name = $(el).text()
+        const link = `https://rustlabs.com${$(el).attr("href")}`
+        const logo = `https:${$(el).find("img").attr("src").replace("items40", "items180")}`
+        items.push({ name, link, logo })
+    })
+    return items
+}
+export interface GenericItem {
+    name: string
+    link: string
+    logo: string
+}
