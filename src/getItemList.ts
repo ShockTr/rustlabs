@@ -10,7 +10,8 @@ export async function getItemList() {
         const name = $(el).text()
         const url = `https://rustlabs.com${$(el).attr("href")}`
         const logo = `https:${$(el).find("img").attr("src").replace("items40", "items180")}`
-        items.push({ name, url, logo })
+        const category = $(el).prevAll("h2").first().text()
+        items.push({ name, url, logo, category })
     })
     return items
 }
@@ -18,4 +19,5 @@ export interface GenericItem {
     name: string
     url: string
     logo: string
+    category: string
 }
