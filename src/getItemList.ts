@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import cheerio from "cheerio";
 
-export async function getItemList() {
+export async function getItemList() : Promise<GenericItem[]> {
     let res = await fetch("https://rustlabs.com/group=itemlist")
     let html = await res.text()
     const $ = cheerio.load(html)

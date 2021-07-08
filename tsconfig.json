@@ -2,15 +2,19 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "CommonJS",
-    "strict": false,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
+    "outDir": "dist",
+    "strict": false,
+    "removeComments": false,
+    "pretty": true,
     "sourceMap": true,
-    "outDir": "dist/"
+    "inlineSources": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/test.ts"
   ]
 }
