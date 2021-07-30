@@ -1,8 +1,8 @@
 {
   "name": "rustlabs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "rustlabs item list scraper",
-  "main": "dist/src/index",
+  "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "dev": "ts-node src/index",
@@ -27,5 +27,8 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
     "node-fetch": "^2.6.1"
-  }
+  },
+  "files": [
+    "dist/*"
+  ]
 }
